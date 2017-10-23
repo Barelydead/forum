@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Monofett');
+
+html {
+    overflow-y: scroll;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+}
+
+
+.comment-content {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+textarea {
+    height: 200px;
+}
+
+
+/* NAVBAR */
+
+.navbar-wrap, .bg-faded {
+    background-color: lightslategray;
+}
+
+.navbar-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+.site-wrap {
+    margin-top: 72px;
+}
+
+
+
+/* FLASH */
+.flash-wrap {
+    background-image: url("../image/bridge.jpeg?width=2000&height=120&crop-to-fit");
+    height: 117px;
+}
+
+.logo-text {
+    font-size: 6.5rem;
+    font-weight: bold;
+    color: black;
+    font-family: 'Monofett', cursive;
+    text-align: center;
+}
+
+.flash-inner-wrap {
+    height: 117px;
+    background: rgba(255,255,255,0.5);
+}
+
+
+/* FORMS */
+
+.htmlform {
+    border-left: 2px solid lightslategray;
+    padding: 0 0 0 20px;
+}
+
+.form .form-title {
+    width: 100px;
+    position: relative;
+    left: -98px;
+    top: 91px;
+    background: lightslategray;
+    word-wrap: break-word;
+    height: 83px;
+}
+
+
+/* POST-PAGE */
+
+.super-wrap {
+    background: #ECEEEF;
+    padding: 10px 0;
+    margin-bottom: 18px;
+}
+
+
+a i {
+    color: lightslategray;
+}
+
+a i:hover {
+    color: #222;
+}
+
+
+/* LINKS */
+
+a {
+    color: lightslategray;
+}
+
+a:hover {
+    color: #222;
+}
+
+
+/* Profile*/
+
+.p-2 h2 {
+    text-align: center;
+}
+
+
+
+/*FOOTER */
+
+.footer {
+    border-top: 2px solid lightslategray;
+}
