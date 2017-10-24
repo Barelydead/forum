@@ -92,7 +92,6 @@ class UserController implements InjectionAwareInterface
         $comment    = $this->di->get("comment");
         $pageRender = $this->di->get("pageRender");
         $user       = $this->di->get("user");
-        $res        = $this->di->get("response");
 
         $this->checkUser();
 
