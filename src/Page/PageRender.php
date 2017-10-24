@@ -8,6 +8,12 @@ use \Anax\DI\InjectionAwareTrait;
 /**
  * A default page rendering class.
  */
+ /**
+ * This will suppress all the PMD warnings in
+ * this class.
+ *
+ * @SuppressWarnings(PHPMD)
+ */
 class PageRender implements PageRenderInterface, InjectionAwareInterface
 {
     use InjectionAwareTrait;

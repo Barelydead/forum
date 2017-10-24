@@ -8,7 +8,7 @@ return [
             "info" => "form for new post",
             "requestMethod" => "get|post",
             "path" => "new",
-            "callable" => ["commentController", "newComment"],
+            "callable" => ["formController", "newComment"],
         ],
         [
             "info" => "Display posts",
@@ -32,7 +32,7 @@ return [
             "info" => "Comment on a reply",
             "requestMethod" => "get|post",
             "path" => "reply/{qId}/comment/{rId}",
-            "callable" => ["commentController", "commentReply"],
+            "callable" => ["formController", "commentReply"],
         ],
         [
             "info" => "Get post overview based on tag name",
@@ -50,19 +50,19 @@ return [
             "info" => "Edit question",
             "requestMethod" => "get|post",
             "path" => "edit/{id}",
-            "callable" => ["commentController", "editPost"],
+            "callable" => ["formController", "editPost"],
         ],
         [
             "info" => "edit tags for question",
             "requestMethod" => "get|post",
             "path" => "edit/tags/{id}",
-            "callable" => ["commentController", "editTags"],
+            "callable" => ["formController", "editTags"],
         ],
         [
             "info" => "Add tag desc",
             "requestMethod" => "get|post",
             "path" => "update/tag/{id}",
-            "callable" => ["commentController", "editTagDescription"],
+            "callable" => ["formController", "editTagDescription"],
         ],
         [
             "info" => "mark answer as accepted",
@@ -80,7 +80,7 @@ return [
             "info" => "Delete post",
             "requestMethod" => "get|post",
             "path" => "post/delete/{id}",
-            "callable" => ["commentController", "deletePost"],
+            "callable" => ["formController", "deletePost"],
         ],
     ]
 ];

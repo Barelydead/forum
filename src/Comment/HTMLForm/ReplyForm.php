@@ -67,6 +67,7 @@ class ReplyForm extends FormModel
         $comment->user = $userId;
         $comment->questionId = $questionId;
         $comment->reply = 1;
+        $comment->likes = 0;
         $comment->save();
 
         $user = new User();

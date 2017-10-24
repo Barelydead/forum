@@ -72,6 +72,7 @@ class CommentReplyForm extends FormModel
         $comment->replyId = $replyId;
         $comment->questionId = $questionId;
         $comment->comment = 1;
+        $comment->likes = 0;
         $comment->save();
 
         $user = new User();

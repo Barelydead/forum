@@ -77,6 +77,7 @@ class CreateCommentForm extends FormModel
         $comment->created = date("Y-m-d H:i:s");
         $comment->user = $userId;
         $comment->title = $title;
+        $comment->likes = 0;
         $comment->save();
 
         $user = new User();
@@ -86,6 +87,7 @@ class CreateCommentForm extends FormModel
         $user->save();
 
         $tags = explode(" ", $tags);
+        $tags = array_slice($tags, 0, 3);
 
         foreach ($tags as $singleTag) {
             $tag = new Tag();

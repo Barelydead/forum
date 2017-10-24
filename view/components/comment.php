@@ -99,7 +99,7 @@
         </div>
 
         <div class="col-1">
-            <?php if ($loggedInUser == $post->user) :?>
+            <?php if ($loggedInUser == $reply->user) :?>
                 <a href="<?= $di->get("url")->create("forum/post/mark/reply/$reply->postId") ?>">
                     <i class="fa fa-check-circle-o" aria-hidden="true" title="Accpeted answer toggle"></i>
                 </a>

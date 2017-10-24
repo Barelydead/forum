@@ -134,6 +134,14 @@ return [
                 return $obj;
             }
         ],
+        "formController" => [
+            "shared" => true,
+            "callback" => function () {
+                $obj = new \CJ\Comment\FormController();
+                $obj->setDI($this);
+                return $obj;
+            }
+        ],
         "comment" => [
             "shared" => true,
             "callback" => function () {

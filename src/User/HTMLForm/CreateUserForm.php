@@ -86,6 +86,7 @@ class CreateUserForm extends FormModel
         $user->setDb($this->di->get("db"));
 
         $user->mail = $mail;
+        $user->karma = 15;
         $user->username = $username;
         $user->updated = date("Y-m-d H:i:s");
         $user->setPassword($password);
