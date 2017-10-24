@@ -9,7 +9,7 @@ use \CJ\Comment\Comment;
 /**
  * Form to create an item.
  */
-class EditCommentForm extends FormModel
+class EditReplyForm extends FormModel
 {
     /**
      * Constructor injects with DI container.
