@@ -92,15 +92,18 @@ class UserController implements InjectionAwareInterface
         $comment    = $this->di->get("comment");
         $pageRender = $this->di->get("pageRender");
         $user       = $this->di->get("user");
+        $res        = $this->di->get("response");
 
-        $user = $user->getLoggedInUser();
-        $votes = $user->getVotes($user->id);
+        $this->checkUser();
+
+        $userInfo = $user->getLoggedInUser();
+        $votes = $user->getVotes($userInfo->id);
         $posts = $comment->getAllPostsForUser($user->id);
 
         $view->add("components/admin-nav", [], "main");
 
         $view->add("components/profile", [
-                                    "user" => $user,
+                                    "user" => $userInfo,
                                     "posts" => $posts,
                                     "votes" => $votes
                                 ], "main");

@@ -5,6 +5,7 @@ namespace CJ\Comment\HTMLForm;
 use \Anax\HTMLForm\FormModel;
 use \Anax\DI\DIInterface;
 use \CJ\Comment\Comment;
+use \CJ\Comment\Tag;
 
 /**
  * Form to create an item.
@@ -62,6 +63,10 @@ class DeletePost extends FormModel
     {
         $id = $this->form->value("id");
         $comment = $this->di->get("comment");
+
+        $db = $this->di->get("db");
+
+        $db->execute("DELETE FROM f_post2tag WHERE post = ?", [$id]);
 
         $comment->find("id", $id);
         $comment->delete();

@@ -119,12 +119,12 @@ class FormController implements InjectionAwareInterface
         $comment = $this->di->get("comment")->getComment($id);
         $res = $this->di->get("response");
 
+        if (!$comment) {
+            $res->redirect("forum/posts");
+        }
+
         if ($comment->user !== $this->di->get("session")->get("user")) {
-            if (!isset($comment->user)) {
-                $res->redirect("forum/posts");
-            } else {
-                $res->redirect($this->di->get("url")->create("login"));
-            }
+            $res->redirect($this->di->get("url")->create("login"));
         }
 
         $form = new \CJ\Comment\HTMLForm\DeletePost($this->di, $comment);

@@ -12,7 +12,18 @@ This project is the last assignment for the framework BTH course. It is a fully 
 Install your own
 ---------------------
 
-```git clone git@github.com:Barelydead/forum.git``
+```
+git clone git@github.com:Barelydead/forum.git
+```
+
+
+Setup
+--------------
+
+### Get dependencies
+```
+composer update
+```
 
 ### Set up a database to the project
 1. ```rsync -av vendor/anax/database/config/database.php config```
